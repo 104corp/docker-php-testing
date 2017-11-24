@@ -15,6 +15,4 @@ RUN set -xe && \
             exif \
             gd \
             pdo_mysql \
-            soap \
-        && \
-        apk del .build-deps
+            soap
