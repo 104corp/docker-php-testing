@@ -2,7 +2,7 @@ FROM mileschou/php-xdebug:7.0
 
 # Install extensions
 RUN set -xe && \
-        apk add --no-cache \
+        apk add --no-cache --virtual .build-deps \
             libjpeg-turbo-dev \
             libpng-dev \
             libxml2-dev \
@@ -12,6 +12,9 @@ RUN set -xe && \
             --with-png-dir=/usr/include/ \
         && \
         docker-php-ext-install \
+            exif \
             gd \
             pdo_mysql \
-            soap
+            soap \
+        && \
+        apk del .build-deps
