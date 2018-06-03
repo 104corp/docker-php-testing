@@ -4,6 +4,12 @@ ENV COMPOSER_PATH /usr/local/bin/composer
 
 # Install extensions
 RUN set -xe && \
+        # Runtime dependency
+        apk add --no-cache \
+            libjpeg-turbo \
+            libmcrypt \
+            libpng \
+        && \
         apk add --no-cache --virtual .build-deps \
             libjpeg-turbo-dev \
             libmcrypt-dev \
@@ -22,6 +28,8 @@ RUN set -xe && \
             pdo_mysql \
             soap \
             zip \
+        && \
+        apk del .build-deps \
         && \
         php -m
 
