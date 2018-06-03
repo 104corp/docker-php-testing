@@ -25,7 +25,7 @@ RUN set -xe && \
             --with-jpeg-dir=/usr/include/ \
             --with-png-dir=/usr/include/ \
         && \
-        docker-php-ext-install \
+        docker-php-ext-install -j $(getconf _NPROCESSORS_ONLN) \
             exif \
             gd \
             pdo_mysql \
