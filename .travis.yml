@@ -21,5 +21,5 @@ script:
   - docker images
 
 after_success:
-  - docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
-  - docker push $IMAGE
+  - if [ "false" == "$TRAVIS_PULL_REQUEST" ]; then docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD ; fi
+  - if [ "false" == "$TRAVIS_PULL_REQUEST" ]; then docker push $IMAGE ; fi
