@@ -19,10 +19,11 @@ See [Docker Hub](https://hub.docker.com/r/104corp/php-testing/)
 * exif
 * gd
 * mcrypt (not supported in PHP 7.2)
+* memcached (using 2.2.0 in PHP 5.x)
 * pdo_mysql
 * soap
 * zip
 
 ## Tools
 
-* Composer
+* [Composer](https://getcomposer.org/) with [`hirak/prestissimo`](https://github.com/hirak/prestissimo) parallel install plugin
