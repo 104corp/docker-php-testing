@@ -1,6 +1,10 @@
 language: bash
 services: docker
 
+branches:
+  only:
+  - master
+
 env:
   - VERSION=5.5
   - VERSION=5.6
