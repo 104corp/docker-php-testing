@@ -7,12 +7,18 @@ RUN set -xe && \
         # Runtime dependency
         apk add --no-cache \
             libjpeg-turbo \
+            libmemcached-libs \
             libpng \
         && \
         apk add --no-cache --virtual .build-deps \
+            autoconf \
+            cyrus-sasl-dev \
+            g++ \
             libjpeg-turbo-dev \
+            libmemcached-dev \
             libpng-dev \
             libxml2-dev \
+            make \
             zlib-dev \
         && \
         docker-php-ext-configure gd \
@@ -25,6 +31,10 @@ RUN set -xe && \
             pdo_mysql \
             soap \
             zip \
+        && \
+        pecl install memcached \
+        && \
+        docker-php-ext-enable memcached \
         && \
         apk del .build-deps \
         && \
