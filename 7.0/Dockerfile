@@ -35,9 +35,13 @@ RUN set -xe && \
             soap \
             zip \
         && \
-        pecl install memcached \
+        pecl install \
+            memcached \
+            redis \
         && \
-        docker-php-ext-enable memcached \
+        docker-php-ext-enable \
+            memcached \
+            redis \
         && \
         apk del .build-deps \
         && \
