@@ -31,4 +31,4 @@ script:
 
 after_success:
   - if [ "false" == "$TRAVIS_PULL_REQUEST" ]; then echo $DOCKER_HUB_PASSWORD | docker login -u $DOCKER_HUB_USERNAME --password-stdin ; fi
-  - if [ "false" == "$TRAVIS_PULL_REQUEST" ]; then docker push $IMAGE ; fi
+  - if [ "false" == "$TRAVIS_PULL_REQUEST" ]; then docker push $IMAGE && docker logout ; fi
