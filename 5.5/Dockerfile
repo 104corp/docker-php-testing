@@ -1,4 +1,4 @@
-FROM mileschou/php-xdebug:5.5
+FROM mileschou/xdebug:5.5
 
 ENV COMPOSER_PATH /usr/local/bin/composer
 
