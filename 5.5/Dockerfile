@@ -6,6 +6,7 @@ ENV COMPOSER_PATH /usr/local/bin/composer
 RUN set -xe && \
         # Runtime dependency
         apk add --no-cache \
+            libgmpxx \
             libjpeg-turbo \
             libmcrypt \
             libmemcached-libs \
@@ -15,6 +16,7 @@ RUN set -xe && \
             autoconf \
             cyrus-sasl-dev \
             g++ \
+            gmp-dev \
             libjpeg-turbo-dev \
             libmcrypt-dev \
             libmemcached-dev \
@@ -30,6 +32,7 @@ RUN set -xe && \
         docker-php-ext-install -j $(getconf _NPROCESSORS_ONLN) \
             exif \
             gd \
+            gmp \
             mcrypt \
             pdo_mysql \
             soap \

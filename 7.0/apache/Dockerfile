@@ -5,6 +5,7 @@ ENV COMPOSER_PATH /usr/local/bin/composer
 # Install extensions
 RUN set -xe && \
         apt-get update -y && apt-get install -y --no-install-recommends --no-install-suggests \
+            libgmp-dev \
             libjpeg-dev \
             libmcrypt-dev \
             libmemcached-dev \
@@ -21,6 +22,7 @@ RUN set -xe && \
         docker-php-ext-install -j $(getconf _NPROCESSORS_ONLN) \
             exif \
             gd \
+            gmp \
             mcrypt \
             pdo_mysql \
             soap \
