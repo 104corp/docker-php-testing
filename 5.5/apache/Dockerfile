@@ -37,7 +37,7 @@ RUN set -xe && \
         && \
         pecl install \
             memcached-2.2.0 \
-            redis \
+            redis-4.3.0 \
         && \
         docker-php-ext-enable \
             memcached \
