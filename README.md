@@ -1,19 +1,24 @@
 # Actions and Docker Image with PHP extensions
 
-[![GitHub Release](https://img.shields.io/github/tag/104corp/actions-php-testing.svg)](https://github.com/104corp/actions-php-testing/releases)
+[![GitHub Release](https://img.shields.io/github/tag/104corp/docker-php-testing.svg)](https://github.com/104corp/docker-php-testing/releases)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
-[![Build Status](https://travis-ci.org/104corp/docker-php-testing.svg?branch=master)](https://travis-ci.org/104corp/docker-php-testing)
 [![DockerHub Stars](https://img.shields.io/docker/stars/104corp/php-testing.svg)](https://hub.docker.com/r/104corp/php-testing/)
 [![DockerHub Pulls](https://img.shields.io/docker/pulls/104corp/php-testing.svg)](https://hub.docker.com/r/104corp/php-testing/)
 
-## Usage Actions
+![Testing](https://github.com/104corp/docker-php-testing/workflows/PHP%20testing/badge.svg)
+
+## Usage for Actions
 
 Via GitHub Workflow
 
 ```
 - name: PHP testing actions
-  uses: 104corp/docker-php-testing@v0.0.1
+  uses: 104corp/docker-php-testing@v1.0.0
 ```
+
+## Usage for Docker
+
+See [Docker Hub](https://hub.docker.com/r/104corp/php-testing/)
 
 ## Supported tags and respective `Dockerfile` links
 
