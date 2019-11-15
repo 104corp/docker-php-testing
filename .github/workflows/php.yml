@@ -1,0 +1,12 @@
+name: PHP testing
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PHP testing actions
+        uses: 104corp/docker-php-testing@v0.0.1
+        with:
+          args: php -v && php -m
