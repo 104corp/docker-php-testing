@@ -37,10 +37,8 @@ RUN set -xe && \
         php -m
 
 # Install Composer and configure
+COPY --from=composer:1.9.1 /usr/bin/composer /usr/local/bin/composer
+
 RUN set -xe && \
-        curl -sS https://getcomposer.org/installer | php && \
-        chmod +x composer.phar && \
-        mv composer.phar ${COMPOSER_PATH} && \
-        composer --version && \
         composer global require hirak/prestissimo && \
         composer clear-cache
