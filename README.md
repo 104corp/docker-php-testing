@@ -37,6 +37,7 @@ See [Docker Hub](https://hub.docker.com/r/104corp/php-testing/)
 
 ## Extensions
 
+* bcmath
 * exif
 * gd
 * gmp
@@ -47,6 +48,7 @@ See [Docker Hub](https://hub.docker.com/r/104corp/php-testing/)
   + 5.0+ in PHP 7.x
   + [4.3.0](https://pecl.php.net/package/redis/4.3.0) in PHP 5.x
 * soap
+* sockets
 * zip
 
 ## Tools
