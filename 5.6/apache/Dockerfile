@@ -44,7 +44,7 @@ RUN set -xe && \
         php -m
 
 # Install Composer and configure
-COPY --from=composer:1.9.1 /usr/bin/composer /usr/local/bin/composer
+COPY --from=composer:1 /usr/bin/composer /usr/local/bin/composer
 
 RUN set -xe && \
         composer global require hirak/prestissimo && \
