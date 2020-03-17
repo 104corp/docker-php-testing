@@ -19,11 +19,13 @@ RUN set -xe && \
             --with-png-dir=/usr/include/ \
         && \
         docker-php-ext-install -j $(getconf _NPROCESSORS_ONLN) \
+            bcmath \
             exif \
             gd \
             gmp \
             pdo_mysql \
             soap \
+            sockets \
             zip \
         && \
         pecl install \

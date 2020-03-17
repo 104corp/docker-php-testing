@@ -27,12 +27,14 @@ RUN set -xe && \
         ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h \
         && \
         docker-php-ext-install -j $(getconf _NPROCESSORS_ONLN) \
+            bcmath \
             exif \
             gd \
             gmp \
             mcrypt \
             pdo_mysql \
             soap \
+            sockets \
             zip \
         && \
         pecl install \
