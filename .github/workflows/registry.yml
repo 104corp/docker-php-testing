@@ -10,13 +10,20 @@ jobs:
         version: ["7.3", "7.2", "7.1", "7.0", "5.6", "5.5"]
     steps:
       - uses: actions/checkout@master
-      - name: Build PHP ${{ matrix.version }} and publish to GitHub Registry
+      - name: Build PHP ${{ matrix.version }} Alpine and publish to GitHub Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
           name: 104corp/docker-php-testing/alpine:${{ matrix.version }}
           username: ${{ secrets.GITHUB_USERNAME }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
+          dockerfile: ${{ matrix.version }}/Dockerfile
+      - name: Build PHP ${{ matrix.version }} Alpine and publish to DockerHub Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: 104corp/php-testing:${{ matrix.version }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
           dockerfile: ${{ matrix.version }}/Dockerfile
 
   apache:
@@ -26,11 +33,18 @@ jobs:
         version: ["7.3", "7.2", "7.1", "7.0", "5.6", "5.5"]
     steps:
       - uses: actions/checkout@master
-      - name: Build PHP ${{ matrix.version }} and publish to GitHub Registry
+      - name: Build PHP ${{ matrix.version }} Apache and publish to GitHub Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
           name: 104corp/docker-php-testing/apache:${{ matrix.version }}
           username: ${{ secrets.GITHUB_USERNAME }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
+          dockerfile: ${{ matrix.version }}/apache/Dockerfile
+      - name: Build PHP ${{ matrix.version }} Apache and publish to DockerHub Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: 104corp/php-testing:${{ matrix.version }}-apache
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
           dockerfile: ${{ matrix.version }}/apache/Dockerfile
