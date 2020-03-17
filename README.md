@@ -5,7 +5,7 @@
 [![DockerHub Stars](https://img.shields.io/docker/stars/104corp/php-testing.svg)](https://hub.docker.com/r/104corp/php-testing/)
 [![DockerHub Pulls](https://img.shields.io/docker/pulls/104corp/php-testing.svg)](https://hub.docker.com/r/104corp/php-testing/)
 
-![PHP testing](https://github.com/104corp/docker-php-testing/workflows/PHP%20testing/badge.svg)
+![Testing](https://github.com/104corp/docker-php-testing/workflows/Testing/badge.svg)
 ![Publish Docker](https://github.com/104corp/docker-php-testing/workflows/Publish%20Docker/badge.svg)
 
 ## Usage for Actions
