@@ -14,7 +14,7 @@ Via GitHub Workflow
 
 ```
 - name: PHP testing actions
-  uses: 104corp/docker-php-testing@v1.0.0
+  uses: 104corp/docker-php-testing@master
 ```
 
 ## Usage for Docker
