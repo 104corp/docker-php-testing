@@ -23,6 +23,8 @@ See [Docker Hub](https://hub.docker.com/r/104corp/php-testing/)
 
 ## Supported tags and respective `Dockerfile` links
 
+* [`7.4` (7.4/Dockerfile)](https://github.com/104corp/docker-php-testing/blob/master/7.4/Dockerfile)
+* [`7.4-apache` (7.4/apache/Dockerfile)](https://github.com/104corp/docker-php-testing/blob/master/7.4/apache/Dockerfile)
 * [`7.3` (7.3/Dockerfile)](https://github.com/104corp/docker-php-testing/blob/master/7.3/Dockerfile)
 * [`7.3-apache` (7.3/apache/Dockerfile)](https://github.com/104corp/docker-php-testing/blob/master/7.3/apache/Dockerfile)
 * [`7.2` (7.2/Dockerfile)](https://github.com/104corp/docker-php-testing/blob/master/7.2/Dockerfile)
