@@ -23,6 +23,8 @@ See [Docker Hub](https://hub.docker.com/r/104corp/php-testing/)
 
 ## Supported tags and respective `Dockerfile` links
 
+* [`8.0` (8.0/Dockerfile)](https://github.com/104corp/docker-php-testing/blob/master/8.0/Dockerfile)
+* [`8.0-apache` (8.0/apache/Dockerfile)](https://github.com/104corp/docker-php-testing/blob/master/8.0/apache/Dockerfile)
 * [`7.4` (7.4/Dockerfile)](https://github.com/104corp/docker-php-testing/blob/master/7.4/Dockerfile)
 * [`7.4-apache` (7.4/apache/Dockerfile)](https://github.com/104corp/docker-php-testing/blob/master/7.4/apache/Dockerfile)
 * [`7.3` (7.3/Dockerfile)](https://github.com/104corp/docker-php-testing/blob/master/7.3/Dockerfile)
@@ -44,8 +46,9 @@ See [Docker Hub](https://hub.docker.com/r/104corp/php-testing/)
 * exif
 * gd
 * gmp
-* mcrypt (not supported in PHP 7.2)
+* mcrypt (not supported in PHP 7.2+)
 * memcached (using 2.2.0 in PHP 5.x)
+  + [2.2.0](https://pecl.php.net/package/memcached/2.2.0) in PHP 5.x
 * pdo_mysql
 * [redis](https://pecl.php.net/package/redis)
   + 5.0+ in PHP 7.x
