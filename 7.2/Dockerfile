@@ -10,6 +10,7 @@ RUN set -xe && \
             libjpeg-turbo \
             libmemcached-libs \
             libpng \
+            make \
         && \
         apk add --no-cache --virtual .build-deps \
             autoconf \
@@ -20,7 +21,6 @@ RUN set -xe && \
             libmemcached-dev \
             libpng-dev \
             libxml2-dev \
-            make \
             zlib-dev \
         && \
         docker-php-ext-configure gd \

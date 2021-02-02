@@ -60,3 +60,4 @@ See [Docker Hub](https://hub.docker.com/r/104corp/php-testing/)
 ## Tools
 
 * [Composer](https://getcomposer.org/) with [`hirak/prestissimo`](https://github.com/hirak/prestissimo) parallel install plugin
+* GNU Make

@@ -11,6 +11,7 @@ RUN set -xe && \
             libmcrypt \
             libmemcached-libs \
             libpng \
+            make \
         && \
         apk add --no-cache --virtual .build-deps \
             autoconf \
@@ -22,7 +23,6 @@ RUN set -xe && \
             libmemcached-dev \
             libpng-dev \
             libxml2-dev \
-            make \
             zlib-dev \
         && \
         docker-php-ext-configure gd \
@@ -56,6 +56,5 @@ RUN set -xe && \
 COPY --from=composer:1 /usr/bin/composer /usr/local/bin/composer
 
 RUN set -xe && \
-        composer self-update && \
         composer global require hirak/prestissimo && \
         composer clear-cache

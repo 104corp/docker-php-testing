@@ -51,6 +51,5 @@ RUN set -xe && \
 COPY --from=composer:1 /usr/bin/composer /usr/local/bin/composer
 
 RUN set -xe && \
-        composer self-update && \
         composer global require hirak/prestissimo && \
         composer clear-cache

@@ -11,6 +11,7 @@ RUN set -xe && \
             libmemcached-libs \
             libpng \
             libzip \
+            make \
         && \
         apk add --no-cache --virtual .build-deps \
             autoconf \
@@ -22,7 +23,6 @@ RUN set -xe && \
             libpng-dev \
             libxml2-dev \
             libzip-dev \
-            make \
             zlib-dev \
         && \
         docker-php-ext-configure gd \
