@@ -49,9 +49,5 @@ RUN set -xe && \
         && \
         php -m
 
-# Install Composer and configure
-COPY --from=composer:1 /usr/bin/composer /usr/local/bin/composer
-
-RUN set -xe && \
-        composer global require hirak/prestissimo && \
-        composer clear-cache
+# Install Composer v2
+COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
