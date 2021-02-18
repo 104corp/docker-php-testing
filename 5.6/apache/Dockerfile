@@ -1,4 +1,4 @@
-FROM mileschou/xdebug:5.6-apache
+FROM ghcr.io/mileschou/xdebug:5.6-apache
 
 ENV COMPOSER_PATH /usr/local/bin/composer
 
